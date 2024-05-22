@@ -86,7 +86,7 @@ return [
         | 'link_collections' => [
         |     'pages',
         |     'blog',
-        | ];
+        | ],
         |
         | Set to 'null' to not define link collections.
         |
