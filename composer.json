@@ -1,0 +1,50 @@
+{
+    "name": "mitydigital/statamic-sticky-notes",
+    "autoload": {
+        "psr-4": {
+            "MityDigital\\StatamicStickyNotes\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MityDigital\\StatamicStickyNotes\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^2.9",
+        "laravel/pint": "^1.16",
+        "pestphp/pest-plugin-laravel": "^2.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "pint": [
+            "./vendor/bin/pint"
+        ],
+        "test": [
+            "php -d memory_limit=-1 -d max_execution_time=0 ./vendor/bin/pest"
+        ]
+    },
+    "extra": {
+        "statamic": {
+            "name": "Sticky Notes for Statamic",
+            "description": "Sticky Notes for Statamic provides a Dashboard widget to display CP-editable notes to your users."
+        },
+        "laravel": {
+            "providers": [
+                "MityDigital\\StatamicStickyNotes\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
