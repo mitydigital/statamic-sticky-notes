@@ -36,3 +36,6 @@ Please try to be detailed when logging an issue, including a clear description o
 issue, and any steps you may have tried or taken to overcome the issue too. This is an awesome first step to helping us
 help you. So be awesome - it'll feel fantastic.
 
+## License
+
+This addon is licensed under the MIT license.
