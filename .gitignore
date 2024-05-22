@@ -8,6 +8,7 @@ vendor
 package-lock.json
 composer.lock
 .php_cs.cache
+.phpunit.cache
 
 resources/dist/hot
 
