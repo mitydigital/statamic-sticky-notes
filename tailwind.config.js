@@ -2,6 +2,7 @@ module.exports = {
     content: [
         './resources/views/widgets/_content.blade.php',
     ],
+    darkMode: 'selector',
     theme: {
         extend: {
             typography: {
