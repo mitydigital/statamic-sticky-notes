@@ -4,23 +4,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Path and Filename
-    |--------------------------------------------------------------------------
-    |
-    | Your Sticky Notes content gets stored in a YAML file, and by default is
-    | in your 'content' folder, '/content/statamic-sticky-notes.yaml'. We love
-    | this because it means it gets included in Statamic's Git Automation.
-    |
-    | You can change the path and filename here, if required.
-    |
-    */
-
-    'path' => base_path('content'),
-
-    'filename' => 'statamic-sticky-notes',
-
-    /*
-    |--------------------------------------------------------------------------
     | Content configuration
     |--------------------------------------------------------------------------
     |
@@ -94,4 +77,5 @@ return [
 
         'link_collections' => null,
     ],
+
 ];

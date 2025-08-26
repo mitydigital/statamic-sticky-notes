@@ -2,17 +2,15 @@
 
 namespace MityDigital\StatamicStickyNotes\Support;
 
-use Statamic\Facades\Blueprint;
 use Statamic\Facades\File;
 use Statamic\Facades\Path;
-use Statamic\Facades\YAML;
 use Stringy\StaticStringy;
 
 class StickyNotes
 {
-    public static function blueprint(): \Statamic\Fields\Blueprint
+    public static function blueprint(): array
     {
-        return Blueprint::make()->setContents([
+        return [
             'sections' => [
                 'main' => [
                     'fields' => [
@@ -59,6 +57,7 @@ class StickyNotes
                                 'buttons' => self::getBardButtons(),
                                 'link_collections' => self::getBardLinkCollections(),
                                 'container' => config('statamic-sticky-notes.content.container'),
+                                'remove_empty_nodes'=> 'trim',
                                 'validate' => [
                                     'required',
                                 ],
@@ -67,7 +66,7 @@ class StickyNotes
                     ],
                 ],
             ],
-        ]);
+        ];
     }
 
     protected static function getBardButtons(): ?array
@@ -103,23 +102,5 @@ class StickyNotes
         );
 
         return str_replace('<svg', sprintf('<svg%s', $attrs), $svg);
-    }
-
-    public static function save(array $payload): void
-    {
-        File::put(self::getPath(), YAML::dump($payload));
-    }
-
-    public static function getPath(): string
-    {
-        $path = config('statamic-sticky-notes.path');
-        $filename = config('statamic-sticky-notes.filename');
-
-        return $path.'/'.$filename.'.yaml';
-    }
-
-    public static function load(): array
-    {
-        return YAML::file(self::getPath())->parse();
     }
 }

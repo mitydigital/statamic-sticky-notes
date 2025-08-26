@@ -4,7 +4,7 @@ use MityDigital\StatamicStickyNotes\Facades\StatamicStickyNotes;
 use MityDigital\StatamicStickyNotes\Widgets\StickyNotes;
 
 beforeEach(function () {
-    $this->widget = new StickyNotes();
+    $this->widget = new StickyNotes;
 });
 
 it('returns the correct view', function () {
