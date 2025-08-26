@@ -1,0 +1,16 @@
+show: true
+heading: 'This is a custom heading'
+intro: 'And a custom introduction'
+content:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Bard content'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'With two lines'

@@ -57,7 +57,7 @@ class StickyNotes
                                 'buttons' => self::getBardButtons(),
                                 'link_collections' => self::getBardLinkCollections(),
                                 'container' => config('statamic-sticky-notes.content.container'),
-                                'remove_empty_nodes'=> 'trim',
+                                'remove_empty_nodes' => 'trim',
                                 'validate' => [
                                     'required',
                                 ],

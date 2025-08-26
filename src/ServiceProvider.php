@@ -4,7 +4,6 @@ namespace MityDigital\StatamicStickyNotes;
 
 use MityDigital\StatamicStickyNotes\Facades\StatamicStickyNotes;
 use MityDigital\StatamicStickyNotes\Widgets\StickyNotes;
-use Statamic\Facades\YAML;
 use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
@@ -30,10 +29,6 @@ class ServiceProvider extends AddonServiceProvider
 
     public function bootAddon()
     {
-
-        if (false) {
-            dd(YAML::dump());
-        }
         $this->registerSettingsBlueprint(StatamicStickyNotes::blueprint());
 
         $this->app->bind('StatamicStickyNotes', function () {

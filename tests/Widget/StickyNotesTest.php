@@ -1,9 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\File;
 use MityDigital\StatamicStickyNotes\Facades\StatamicStickyNotes;
 use MityDigital\StatamicStickyNotes\Widgets\StickyNotes;
 
 beforeEach(function () {
+    if (File::exists(resource_path('addons/statamic-sticky-notes.yaml'))) {
+        File::delete(resource_path('addons/statamic-sticky-notes.yaml'));
+    }
+
     $this->widget = new StickyNotes;
 });
 
