@@ -12,13 +12,13 @@
     },
     "require": {
         "php": "^8.3",
-        "statamic/cms": "^5.0"
+        "statamic/cms": "^6.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^9.0",
-        "pestphp/pest": "^2.9",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^4.0",
         "laravel/pint": "^1.16",
-        "pestphp/pest-plugin-laravel": "^2.1"
+        "pestphp/pest-plugin-laravel": "^4.0"
     },
     "config": {
         "allow-plugins": {

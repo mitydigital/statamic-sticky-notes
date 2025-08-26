@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\File;
 use MityDigital\StatamicStickyNotes\Tests\TestCase;
 
 uses(TestCase::class)->in('.');
@@ -39,6 +40,9 @@ uses(TestCase::class)->in('.');
 
 function enableStickyNoteContent(): void
 {
-    // update config path to be the test version
-    config()->set('statamic-sticky-notes.path', __DIR__.'/__fixtures__/content');
+    File::ensureDirectoryExists(resource_path('addons'));
+    File::copy(
+        __DIR__.'/__fixtures__/resources/addons/statamic-sticky-notes.yaml',
+        resource_path('addons/statamic-sticky-notes.yaml')
+    );
 }
