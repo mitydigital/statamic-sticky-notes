@@ -1,11 +1,4 @@
-@import 'tailwindcss';
-
-@tailwind utilities;
-
-@source '../views/widgets/_content.blade.php';
-
-@layer utilities {
-    .statamic-sticky-notes-content li > p {
-        @apply my-0!;
-    }
+.statamic-sticky-notes-content li > p {
+    margin-top:0!important;
+    margin-bottom:0!important;
 }
